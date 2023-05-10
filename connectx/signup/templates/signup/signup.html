@@ -1,0 +1,23 @@
+{% extends 'connectx/base.html' %}
+
+{% block content %}
+  <h1>Sign up</h1>
+  <form method="post">
+    {% csrf_token %}
+    <div>
+      <label for="first_name">First name:</label>
+      <input type="text" name="first_name">
+    </div>
+    <div>
+      <label for="last_name">Last name:</label>
+      <input type="text" name="last_name">
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" name="email">
+    </div>
+    <div>
+      <input type="submit" value="Sign up">
+    </div>
+  </form>
+{% endblock %}

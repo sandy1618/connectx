@@ -1,0 +1,17 @@
+{% extends 'connectx/base.html' %}
+
+{% block content %}
+  <h1>User Profile</h1>
+  <ul>
+   
+      <li>{{ user.first_name }} {{ user.last_name }} 
+        <p>{{ user.email }}</p>
+        <!-- <p><a href="{{ user.link }}">{{ user.link_category }}</a></p> -->
+        <!-- <img src="{{ user.qr_code.url }}" alt="QR Code"> -->
+    
+    </li>
+  
+{% endblock %}
+
+
+

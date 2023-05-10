@@ -1,0 +1,9 @@
+name: connectx
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11.3
+  - django=4.1
+  - pandas=2.0.1
+  - qrcode=7.4.2
+  - Pillow=9.5.0
