@@ -1,31 +1,35 @@
 {% extends 'connectx/base.html' %}
 
 {% block content %}
-  <h1>Sign up</h1>
-  <form method="post">
-    {% csrf_token %}
-    <div>
-      <label for="first_name">First name:</label>
-      <input type="text" name="first_name">
+  <div class="d-flex justify-content-center align-items-center">
+    <div class="col-lg-6">
+      <h1 class="text-center">Sign up</h1>
+      <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="first_name">First name:</label>
+          <input type="text" name="first_name" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="last_name">Last name:</label>
+          <input type="text" name="last_name" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" name="email" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" name="password" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="confirm_password">Confirm Password:</label>
+          <input type="password" name="confirm_password" class="form-control">
+        </div>
+        <div class="text-center">
+          <input type="submit" value="Sign up" class="btn btn-primary">
+        </div>
+      </form>
     </div>
-    <div>
-      <label for="last_name">Last name:</label>
-      <input type="text" name="last_name">
-    </div>
-    <div>
-      <label for="email">Email:</label>
-      <input type="email" name="email">
-    </div>
-    <div>
-      <label for="password">Password:</label>
-      <input type="password" name="password">
-    </div>
-    <div>
-      <label for="confirm_password">Confirm Password:</label>
-      <input type="password" name="confirm_password">
-    </div>
-    <div>
-      <input type="submit" value="Sign up">
-    </div>
-  </form>
+  </div>
 {% endblock %}

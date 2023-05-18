@@ -1,0 +1,51 @@
+{% extends 'connectx/base.html' %}
+
+{% block navbar_content %}
+  <li class="nav-item">
+    <a class="nav-link" href="{% url 'signup:admin' pk=user.pk %}">Admin <i class="fas fa-home"></i></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{% url 'signup:portfolio' pk=user.pk %}">Portfolio <i class="fas fa-sign-in-alt"></i></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#"><i class="fas fa-user"></i></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#"><i class="fas fa-cog"></i></a>
+  </li>
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <h1 class="mt-5">Portfolio</h1>
+    <div class="row mt-4">
+      <div class="col-md-6">
+        <h2>User: {{ user.first_name }} {{ user.last_name }}</h2>
+        <p>Email: {{ user.email }}</p>
+  
+        <h3>Links:</h3>
+        <ul class="list-unstyled">
+          {% for link in links %}
+            <li>{{ link.link_category }}: <a href="{{ link.link }}">{{ link.link }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="col-md-6 d-flex justify-content-center align-items-center">
+        <div id="qrcode"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      var url = window.location.href;
+      var qrcode = new QRCode(document.getElementById("qrcode"), {
+        text: url,
+        width: 256,
+        height: 256
+      });
+    });
+  </script>
+{% endblock %}
