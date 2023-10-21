@@ -1,0 +1,71 @@
+## bin for venv 
+bin
+## lib for venv 
+lib
+
+# Ignore compiled Python files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore virtual environment
+venv/
+env/
+.env/
+
+# Ignore log files
+*.log
+
+# Ignore database files
+*.db
+*.sqlite3
+
+# Ignore IDE/Editor-specific files
+.vscode/
+.idea/
+*.suo
+*.ntvs_analysis
+*.njsproj
+*.sln
+*.swp
+
+# Ignore system and temporary files
+Thumbs.db
+Desktop.ini
+*.DS_Store
+*.AppleDouble
+*.bin
+*.lock
+*.gz
+*.iso
+*.tar
+*.7z
+*.dmg
+*.rar
+node_modules/
+*.log
+
+# Ignore Django-specific files and directories
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+db.sqlite3
+*.log
+*.pot
+*.mo
+*.po
+media/
+static/
+uploads/
+local_settings.py
+
+# Ignore migrations and database files
+/migrations/
+*.sqlite3
+/db.sqlite3
+
+# Ignore secret settings file
+secret_settings.py

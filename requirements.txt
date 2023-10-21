@@ -1,0 +1,6 @@
+Django==4.1
+pandas==2.0.1
+qrcode==7.4.2
+Pillow==9.5.0
+django-allauth==0.53.1
+# python 3.10 
