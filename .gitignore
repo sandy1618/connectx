@@ -3,6 +3,9 @@ bin
 ## lib for venv 
 lib
 
+#runtime generated static files
+staticfiles
+
 # Ignore compiled Python files
 __pycache__/
 *.pyc
@@ -69,3 +72,6 @@ local_settings.py
 
 # Ignore secret settings file
 secret_settings.py
+
+# Configuration files. 
+*.cfg
